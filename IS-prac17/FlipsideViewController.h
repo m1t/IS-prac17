@@ -16,6 +16,9 @@
 
 @interface FlipsideViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITextField *messageTo1;
+@property (strong, nonatomic) IBOutlet UILabel *messageFrom1;
+
 @property (weak, nonatomic) id <FlipsideViewControllerDelegate> delegate;
 
 - (IBAction)done:(id)sender;

@@ -30,12 +30,15 @@
 
 - (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller
 {
+    _messageFrom2.text = controller.messageTo1.text;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"showAlternate"]) {
+        NSLog(@"%@",((FlipsideViewController *)[segue destinationViewController]).messageFrom1);
+        ((FlipsideViewController *)[segue destinationViewController]).messageFrom1.text = _messageTo2.text;
         [[segue destinationViewController] setDelegate:self];
     }
 }

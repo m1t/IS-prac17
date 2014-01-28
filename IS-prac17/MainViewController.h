@@ -10,4 +10,7 @@
 
 @interface MainViewController : UIViewController <FlipsideViewControllerDelegate>
 
+@property (strong, nonatomic) IBOutlet UITextField *messageTo2;
+@property (strong, nonatomic) IBOutlet UILabel *messageFrom2;
+
 @end
